@@ -14,7 +14,7 @@ const Tasks = ({ tasks }) => {
         <thead>
           <tr className="text-info">
             <th scope="col">Tasks</th>
-            <th scope="col">Added On</th>
+            <th scope="col">Date and Time</th>
             <th scope="col">Status</th>
             <th scope="col">Delete</th>
           </tr>
@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
   const tasks = state.firestore.ordered.tasks;
   return {
     tasks: tasks,
-    uid: state.firebase.auth.uid
+    uid: state.firebase.auth.uid,
   };
 };
 export default compose(
